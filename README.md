@@ -14,7 +14,7 @@ lua_package_path "/path/to/ngx_lua_datadog/lib/?.lua;;";
 use in a location stanza:
  
 ```
-local conf = { host = "127.0.0.1", port = 8125, prefix = "Lua_Stats_App"}
+local conf = { host = "127.0.0.1", port = 8125, namespace = "Lua_Stats_App"}
 local statsd_logger = require "ngx_lua_statsd"
 local logger, err = statsd_logger:new(conf)
 
@@ -36,7 +36,7 @@ end
 -------|--------
 | host | the ip or name of your statsd server |
 | port | the port number your statsd server runs on, default is 8125 |
-| prefix | the string that all stat messages will be prefixed with |
+| namespace | the string that all stat messages will be prefixed with |
 
 
 ## Statistic Gathering

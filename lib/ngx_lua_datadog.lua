@@ -19,7 +19,7 @@ function statsd_mt:new(conf)
     host = conf.host,
     port = conf.port,
     socket = sock,
-    prefix = conf.prefix
+    namespace = conf.namespace
   }
   return setmetatable(statsd, statsd_mt)
 end
@@ -31,7 +31,7 @@ function statsd_mt:create_statsd_message(stat, delta, kind, sample_rate)
   end
   
   local message = {
-    self.prefix..".",
+    self.namespace..".",
     stat,
     ":",
     delta,
