@@ -1,6 +1,3 @@
-local table_concat = table.concat
-local setmetatable = setmetatable
-
 local dogstatsd_mt = {}
 dogstatsd_mt.__index = dogstatsd_mt
 
@@ -43,7 +40,7 @@ function dogstatsd_mt:create_dogstatsd_message(stat, delta, kind, sample_rate, t
     rate,
     tag_string
   }
-  return table_concat(message, "")
+  return table.concat(message, "")
 end
 
 function dogstatsd_mt:close_socket()
