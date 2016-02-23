@@ -14,7 +14,7 @@ lua_package_path "/path/to/ngx_lua_datadog/lib/?.lua;;";
 use in a location stanza:
  
 ```
-local conf = { host = "127.0.0.1", port = 8125, namespace = "Lua_Stats_App"}
+local conf = { host = "127.0.0.1", port = 8125, namespace = "Lua_Stats_App", timeout = 1}
 local statsd_logger = require "ngx_lua_statsd"
 local logger, err = statsd_logger:new(conf)
 
