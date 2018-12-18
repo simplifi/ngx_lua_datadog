@@ -72,7 +72,11 @@ tags = "country:china,datacenter:asia,account:mass_market"
 logger:count("another_hit", 1, 1, tags)
 ```
 
+## Luarock creation
 
+1. Run `sh scripts/build_rock.sh <version>` where version corresponds to the tag you want to build.  Ex. `sh scripts/build_rock.sh v0.1.0`.
+
+2. Run `luarocks make --local`
 
 
 
