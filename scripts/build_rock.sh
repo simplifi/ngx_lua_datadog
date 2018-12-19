@@ -6,7 +6,6 @@ then
 	exit
 fi
 
-luarocks write_rockspec git+https://github.com/simplifi/ngx_lua_datadog \
-	--tag=$1 \
-       	--license="Apache 2.0" \
-	--homepage="https://github.com/simplifi/ngx_lua_datadog"
+sed -e "s/VERSION/$1/g" ngx_lua_datadog_TEMPLATE.rockspec > ngx_lua_datadog-$1-1.rockspec
+
+luarocks pack ngx_lua_datadog-$1-1.rockspec

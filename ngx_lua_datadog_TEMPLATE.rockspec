@@ -1,8 +1,8 @@
 package = "ngx_lua_datadog"
-version = "0.1.0-1"
+version = "VERSION-1"
 source = {
-   url = "https://github.com/simplifi/ngx_lua_datadog",
-   tag = "v0.1.0"
+   url = "git://github.com/simplifi/ngx_lua_datadog.git",
+   tag = "vVERSION"
 }
 description = {
    detailed = "Simple libary extracted from the [Kong](https://github.com/Mashape/kong) project that allows for Datadog(statsd) collection from inside lua scripts running in nginx",
