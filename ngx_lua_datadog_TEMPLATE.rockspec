@@ -13,6 +13,6 @@ dependencies = {}
 build = {
    type = "builtin",
    modules = {
-      ["lib.ngx_lua_datadog"] = "lib/ngx_lua_datadog.lua"
+      ["ngx_lua_datadog"] = "lib/ngx_lua_datadog.lua"
    }
 }
