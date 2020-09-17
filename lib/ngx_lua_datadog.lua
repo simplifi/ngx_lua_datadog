@@ -83,5 +83,8 @@ function dogstatsd_mt:set(stat, value, tags)
   return self:send_dogstatsd(stat, value, "s", nil, tags)
 end
 
-return dogstatsd_mt
+function dogstatsd_mt:distribution(stat, value, tags)
+  return self:send_dogstatsd(stat, value, "d", nil, tags)
+end
 
+return dogstatsd_mt

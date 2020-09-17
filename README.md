@@ -60,6 +60,9 @@ meter(stat, value, tags)
 
 -- Sets
 meter(stat, value, tags)
+
+-- Distribution
+distribution(stat, value, tags)
 ```
 Sample rates are your responsiblity to calculate.  If you tell it the sample rate is 0.10 (10 percent), then the **value** you send needs to be the sampled value.  e.g. If you've had 100 hits and you send a 0.20 sample rate, the value you send would be 20
 
