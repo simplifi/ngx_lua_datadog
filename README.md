@@ -69,10 +69,11 @@ Sample rates are your responsiblity to calculate.  If you tell it the sample rat
 ## Tag Format
 
 Tags are sent as comma separated key value pairs with a colon deliminating the key from the value, e.g.
+
 ```
 tags = "country:china,datacenter:asia,account:mass_market"
 
-logger:count("another_hit", 1, 1, tags)
+logger:counter("another_hit", 1, 1, tags)
 ```
 
 ## Luarock creation
