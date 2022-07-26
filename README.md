@@ -59,7 +59,7 @@ histogram(stat, value, tags)
 meter(stat, value, tags)
 
 -- Sets
-meter(stat, value, tags)
+set(stat, value, tags)
 
 -- Distribution
 distribution(stat, value, tags)
